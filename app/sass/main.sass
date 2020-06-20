@@ -1,0 +1,679 @@
+@import config
+@import '../../node_modules/jquery-nice-select/css/nice-select.css'
+@import '../libs/_slick.css'
+.btn
+	display: inline-block
+	width: 120px
+	height: 50px
+	font-size: 14px
+	font-family: mon
+	font-weight: 700
+	text-transform: uppercase
+	text-align: center
+	color: white
+	transition: .3s ease
+	line-height: 50px
+	background: url('../images/btn-green.svg')
+	&:hover
+		text-decoration: none
+	&.btn-y
+		background: url('../images/btn-y.svg')
+		&:hover
+			color:  #008538
+	&.btn-lg-green
+		width: 158px
+		position: relative
+		font-size: 12px
+		height: 50px
+		background: url('../images/btn-lg-green.png')
+		&:hover
+			color: $yel
+		&:before 	
+			content: ''
+			position: absolute
+			top: -12px
+			cursor: pointer
+			left: calc(50% - 6px)
+			height: 12px
+			width: 5px
+			display: inline-block
+			background-size: cover
+			background: url('../images/Line.svg')
+
+.btn-green
+	&:hover
+		color: $yel
+
+.btn-lg-y
+	width: 190px
+	height: 60px
+	line-height: 60px
+	background: url('../images/btn-lg-yellow.svg')
+	background-size: cover
+	&:hover
+		color: #018139
+
+
+.social-list
+	width: 100%
+	display: flex
+	justify-content: center
+
+.social-item
+	margin: 0 5px
+
+.social-icon
+	width: 40px
+	height: 40px
+	display: inline-block
+	
+
+.social-icon--phone
+	background: url('../images/phone.svg')
+	background-size: cover
+.social-icon--telegram
+	background: url('../images/telegram.svg')
+	background-size: cover
+.social-icon--viber
+	background: url('../images/viber.svg')
+	background-size: cover
+// header
+.banner-section
+	position: relative
+	&:after
+		content: ''
+		display: block
+		width: 100%
+		height: 146px
+		background: url('../images/banner-bottom.png')
+		position: absolute
+		z-index: 33
+		bottom: 0
+		left: 0
+	&.active
+		&:after 
+			display: none
+		.slider-nav, .slider-dots, .btn
+			display: none
+	.menu-inner
+		padding-left: 35px
+
+.header
+	height: 150px
+	background: url('../images/header-nav.png')
+	background-size: cover
+	position: absolute
+	width: 100%
+	z-index: 2
+	left: 0
+	text-transform: uppercase
+
+.menu-inner
+	width: 97%
+	margin: 0 auto
+	position: relative
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	align-items: center
+	padding-top: 28px
+	.btn
+		position: absolute
+		right: 1%
+	&.active
+		position: fixed
+		top: 0
+		bottom: 0
+		z-index: 33333
+		width: 100%
+		height: 100vh
+		max-height: 700px
+		overflow: scroll
+		right: 0
+		left: 0
+		background: #222A27 url('../images/mobile-bg.png') 0 0 no-repeat
+		.btn
+			display: none
+
+		.menu-mobile--close
+			display: block
+
+		.mobile-top
+			display: block
+		.menu-mobile--open
+			display: none
+		.mobile-social
+			display: flex
+		.nav
+			width: 100%
+
+		.nav-list
+			flex-direction: column
+			display: flex
+			font-size: 18px
+			margin-bottom: 50px
+		.nav-item
+			margin-bottom: 35px
+
+		.nice-select.open .list
+			margin-top: -30px
+			margin-bottom: 80px
+
+
+
+.mobile-top
+	width: 100%
+
+.mobile-top__buttons
+	padding: 15px 15px 0
+	display: flex
+	justify-content: space-between
+
+.mobile-top, .mobile-social
+	display: none
+
+.menu-mobile__key
+	margin-top: 7px	
+
+.mobile-social
+	margin-bottom: 20px
+	.social-icon
+		width: 60px
+		height: 60px
+
+	.social-item
+		margin: 0 10px
+
+.menu-mobile
+	width: 72px
+	height: 72px
+	background-size: cover
+	background: url('../images/key-mobile.svg') no-repeat
+	display: none
+
+.menu-mobile--close
+	background: url('../images/menu-mobile-close.svg') no-repeat
+
+.menu-mobile__key
+	background: url('../images/menu-icon.svg') no-repeat
+
+.mobile-logo
+	width: 110px
+	height: 120px
+	background: url('../images/logo.svg')
+	background-size: cover
+	margin: 6px auto
+	margin-bottom: 83px
+
+.nav-list
+	display: flex
+	font-family: mon
+	font-size: 14px
+	font-weight: 700
+	flex-wrap: wrap
+	align-items: center
+	justify-content: center
+
+.nav-item
+	margin: 0 17.5px
+
+.nav-item
+	&:hover
+		.nav-link
+			color: #F27F0D
+			text-decoration: none
+
+.nav-item-pic
+	svg 
+		margin-right: 7px
+		transform: translateY(-4px)
+	path 
+		transition: .3s ease
+	&:hover
+		path
+			fill: #F27F0D
+
+
+.nav-link
+	color: white
+	transition: .3s ease
+
+.nice-select
+	background: transparent
+	border: none
+	height: auto
+	line-height: 1.2
+	color: white
+	padding: 0
+	padding-left: 15px
+	&:after
+		position: absolute
+		width: 7px
+		height: 6px
+		left: 0
+		border: none
+		background: url('../images/arrow-menu.svg')
+		transform: rotate(180deg)
+
+.current
+	position: relative
+
+.nice-select.open
+	&:after
+		transform: unset
+	.list
+		border-radius: 0
+		// position: relative
+		border: none
+		box-shadow: none
+		padding: 13px 20px
+		color: $textcolor
+		margin-top: 15px
+		left: -7px
+		&:before 
+			content: ''
+			position: absolute
+			z-index: 333
+			display: block
+			bottom: 100%
+			width: 100%
+			height: 8px
+			background-size: cover
+			left: 0
+			background: url('../images/lang-select.png')
+		&:after
+			content: ''
+			position: absolute
+			z-index: 3
+			top: 100%
+			display: inline-block
+			width: 100%
+			height: 8px
+			background-size: cover
+			left: 0
+			background: red
+		li 
+			padding: 0
+			line-height: 1
+			font-size: 12px
+
+.nice-select .option
+	min-height: auto
+	margin-bottom: 10px
+	&:hover
+		color: $yel
+	&:last-child
+		margin-bottom: 0
+
+
+.nice-select .option.selected
+	color: $yel
+	font-weight: 400
+
+.nice-select .option.focus, .nice-select .option.selected.focus, .nice-select .option:hover
+	background: none
+
+.banner-slider
+	position: relative
+
+.banner-item
+	height: 900px
+	min-height: 900px
+	padding-left: 200px
+	padding-top: 150px
+	background: url('../images/banner-bg.jpg')
+	background-size: cover
+
+.banner-img
+	width: 150px
+	height: 164px
+	background: url('../images/logo.svg')
+	background-size: cover
+	margin-bottom: 70px
+
+.banner-title
+	width: 595px
+	height: 185px
+	margin-bottom: 67px
+	background: url('../images/banner-text.png')
+	background-size: cover
+
+.banner-date
+	color: white
+	font-family: Oswald
+	font-style: normal
+	font-weight: 500
+	font-size: 35px
+	color: #F5F4E8
+
+
+.date-text
+	display: block
+	font-family: mon
+	font-weight: 700
+	font-size: 14px
+
+.slider-nav
+	width: 25px
+	position: absolute
+	cursor: pointer
+	top: 48%
+	height: 51px
+	background: url('../images/arrow-left.svg')
+
+.slider-nav__next
+	transform: rotate(180deg)
+	right: 4%
+
+.slider-nav__prev
+	left: 4%
+
+.slider-dots
+	position: absolute
+	bottom: 118px
+	width: 100%
+	z-index: 200
+
+.slick-dots
+	display: flex
+	margin: 0 auto
+	justify-content: center
+	li 
+		cursor: pointer
+
+.slider__dot
+	height: 15px
+	width: 15px
+	margin: 0 10px
+	border: 2px solid #fff
+	border-radius: 50%
+
+.slick-active
+	.slider__dot
+		border: none
+		background: $yel
+
+.banner-btn-down
+	z-index: 100
+	position: absolute
+	bottom: 20px
+	left: calc(50% - 79px)
+
+// events-section
+
+.events-section
+	position: relative
+	&:before 
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		display: block
+		width: 512px
+		height: 169px
+		background: url('../images/events/events-left-top.png')
+
+.menu-inner--white
+	width: 100%
+	justify-content: space-between
+	align-items: end
+	.btn
+		position: static
+	.nav-link, .nice-select
+		color: $textcolor
+	.nice-select.open .list
+		border: 1px solid #000
+
+.menu-inner__right
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	align-items: center
+	.nav-list
+		margin-right: 30px
+
+.nav-logo
+	width: 92px
+	height: 100px
+	background: url('../images/logo-black.svg') no-repeat
+	background-size: cover
+
+.events-section
+	position: relative
+	padding-bottom: 100px
+	&:after 
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 100px
+		background: url('../images/events/events-bottom.png')
+		background-size: cover
+		z-index: 3
+	.menu-inner
+		margin-bottom: 5px
+
+.events-title
+	height: 46px
+	width: 287px
+	margin: 0 auto 50px
+	background: url('../images/events/events-title.png')
+	background-size: cover
+
+.events-gallery
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	margin-bottom: 50px
+
+.event
+	max-width: 30%
+	margin-right: 30px
+	&:last-child
+		margin-right: 0
+	span 
+		display: block
+
+.event-iframe
+	margin-bottom: 15px
+	height: 250px
+	iframe
+		width: 100%
+		height: 100%
+
+.event-name
+	font-family: open
+	font-weight: 700
+	font-size: 20px
+	margin-bottom: 15px
+
+.event-text
+	font-family: open
+	font-style: normal
+	opacity: 0.7
+	font-weight: normal
+	font-size: 15px
+	line-height: 140%
+	margin-bottom: 15px
+
+.event-date
+	font-family: open
+	font-style: normal
+	font-weight: normal
+	font-size: 14px
+	opacity: .7
+
+.events-btn
+	display: flex
+	position: relative
+	z-index: 77
+	justify-content: center
+	margin-bottom: -50px
+
+.event-section-bg
+	position: absolute
+	width: 446px
+	max-width: 100%
+	height: 199px
+	left: 0
+	bottom: 0
+	background: url('../images/events/events-left-bottom.png')
+	background-size: cover
+
+// gallery
+
+.gallery-section
+	background: $accent
+	padding-bottom: 45px
+	position: relative
+	&:before 
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		display: block
+		width: 512px
+		height: 169px
+		background: url('../images/events/events-left-top.png')
+	&:after
+		content: ''
+		position: absolute
+		left: 0
+		bottom: 0
+		display: block
+		width: 100%
+		height: 100px
+		background: url('../images/gallery/gallery-section-after.png')
+
+.gallery-title
+	width: 167px
+	height: 46px
+	text-align: center
+	margin: 0 auto 50px
+	background: url('../images/gallery/gallery-title.png')
+	background-size: cover
+
+.gallery
+	display: flex
+	flex-wrap: wrap
+	margin-bottom: 20px
+	position: relative
+	&:before 
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		display: block
+		width: 771px
+		max-width: 100%
+		height: 33px
+		background: url('../images/gallery/gallery-before.png')
+	&:after
+		content: ''
+		position: absolute
+		right: 0
+		bottom: 0
+		display: block
+		width: 1203px
+		height: 181px
+		max-width: 100%
+		height: 100px
+		background: url('../images/gallery/gallery-after.png')
+.gallery-line
+	&:first-child
+		max-width: (823.5/1440)*100%
+	&:nth-child(2)
+		max-width: (307/1440)*100%
+	&:nth-child(3)
+		max-width: (308/1440)*100%
+
+.gallery-img
+	max-width: 100%
+
+.gallery-btn
+	display: flex
+	justify-content: center
+	.btn 
+		background: url('../images/gallery/gallery-btn.svg')
+		width: 156px
+		height: 60px
+		position: relative
+		z-index: 77
+
+.footer
+	background: $textcolor
+	padding: 100px 0 68px
+	position: relative
+	&:before 
+		content: ''
+		max-width: 100%
+		position: absolute
+		left: 0
+		top: 0
+		display: block
+		width: 512px
+		height: 169px
+		background: url('../images/footer/footer-bg.png')
+		background-size: cover
+
+	.social-item
+		transition: .3s ease
+		&:hover
+			opacity: 0.5
+.footer-title
+	margin: 0 auto 30px
+	width: 213px
+	height: 54px
+	background: url('../images/footer/footer-title.svg')
+	background-size: cover
+
+.foooter-nav__link
+	font-family: open
+	color: #F5F4E8
+	text-transform: uppercase
+	transition: .3s ease
+	&:hover 
+		opacity: .7
+		text-decoration: none
+		color: white
+
+
+.footer-nav__list
+	display: flex
+	font-size: 14px
+	margin-bottom: 38px
+	justify-content: center
+	flex-wrap: wrap	
+
+.footer-nav__item
+	margin: 0 20px
+
+.footer-bottom
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	justify-content: space-between
+	font-family: open;
+	font-size: 15px
+	line-height: 140%
+	text-align: right
+	color: #F5F4E8
+	opacity: 0.7
+	.social-list
+		width: auto
+
+.footer-sun
+	position: relative
+	margin-right: 13px
+	&:after
+		content: ''
+		position: absolute
+		width: 11px
+		height: 11px
+		background: url('../images/footer/sun.svg')
+		background-size: cover
+		top: calc(50% - 4px)
+		right: -13px
+
+@import media

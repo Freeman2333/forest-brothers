@@ -1,0 +1,167 @@
+@media only screen and (max-width : 1300px)
+
+	.menu-mobile
+		display: block
+
+	.menu-mobile--close, .nav-list
+		display: none
+
+	.menu-inner 
+		padding-top: 0
+		justify-content: space-between
+		.btn
+			position: static
+
+	.nav-item
+		transform: translate(1600px,0)
+
+	.menu-inner.active
+		.nav-item
+			transform: translate3d(0,0,0)
+
+	@for $x from 1 through 7
+		.nav-item:nth-child(#{$x})
+			transition-delay: $x * 0.1s
+
+	.banner-section	
+		.menu-inner
+			padding-left: 0
+
+	.menu-inner--white
+		display: none
+
+	.events-section, 
+		padding-top: 20px
+
+	.gallery-section
+		padding-top: 110px
+
+	.event
+		max-width: 45%
+		width: 45%
+		margin-right: 30px
+		margin-bottom: 50px
+		&:nth-child(2)
+			margin-right: 0
+
+	.events-section
+		&:before 
+			display: none
+
+@media only screen and (max-width : 1000px)
+	.footer-nav__list
+		flex-direction: column
+		align-items: center
+
+	.footer-nav__item
+		margin-bottom: 15px
+
+	.footer-bottom
+		flex-direction: column
+		align-items: center
+
+	.footer
+		.social-list
+			order: -1
+			margin-bottom: 50px
+
+	.footer-title
+		margin-bottom: 50px
+
+	.footer-copyright
+		margin-bottom: 15px
+
+@media only screen and (max-width : 900px)
+
+	.banner-item
+		padding-left: 100px
+
+@media only screen and (max-width : 750px)
+
+	.banner-title
+		background: url('../images/mobile-banner-text.png') no-repeat
+
+	.header
+		.btn-y
+			background: url(../images/menu-icon.svg) 0 7px no-repeat
+			width: 72px
+			height: 72px
+			border-radius: 50%
+			padding-top: 7px
+			font-size: 0
+
+	.events-gallery
+		flex-direction: column
+		align-items: center
+
+	.event
+		max-width: 95%
+		width: 95%
+		margin: 0 auto 50px
+
+	.event:nth-child(2),.event:last-child
+		margin: 0 auto 50px
+	.event:last-child
+		margin-bottom: 0
+	.gallery
+		flex-direction: column
+
+	.gallery-line
+		display: flex
+		&:first-child, &:nth-child(2), &:nth-child(3)
+			width: 100%
+			max-width: 100%
+		&:nth-child(2)
+			.gallery-img
+				width: 50%
+		&:nth-child(3)
+			.gallery-img
+				width: 33.333%
+
+	.gallery-section
+		padding-top: 140px
+		&:before
+			max-width: 100%
+
+
+
+@media only screen and (max-width : 500px)
+	.banner-item
+		padding-left: 70px
+
+	.slider-nav
+		top: 83%
+		z-index: 9999
+
+@media only screen and (max-width : 400px)
+
+	.banner-section:after
+		max-width: 100%
+
+	.banner-item
+		padding-left: 38px
+
+	.banner-title
+		max-width: 298px
+
+	.events-section
+		padding-bottom: 150px
+
+	.events-title
+		transform: scale(.8)
+
+	.btn-lg-y
+		font-size: 18px
+
+	.btn.btn-lg-y
+		width: 266px
+		background-size: cover
+		background: url('../images/events/btn-lg-y-mobile.png')
+
+	.event-section-bg
+		max-width: 223px
+		height: 99px
+
+@media only screen and (max-width : 350px)
+	.banner-item
+		padding-left: 20px

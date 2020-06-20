@@ -1,0 +1,76 @@
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+
+// USER VARIABLES SECTION
+
+$accent: #DEDECE // Accent Color
+$yel: #F27F0D // Accent Color
+$fontsize: 15px // Body Font Size
+$textcolor: #222A27 // Text Color
+$system: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+// $roboto: Roboto, sans-serif // Roboto Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+
+// $grid-gutter-width: 20px
+// $gutter: $grid-gutter-width
+
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		font-display: swap
+		src: local($fname), url($furl) format('woff2')
+
+
+@include font('mon', normal, 700, '../fonts/Montserrat-ExtraBold.woff')
+@include font('oswald', normal, 400, '../fonts/Oswald-Regular.woff')
+@include font('oswald', normal, 500, '../fonts/Oswald-Medium.woff')
+@include font('open', normal, 400, '../fonts/OpenSans-Regular.woff')
+@include font('open', normal, 700, '../fonts/OpenSans-Bold.woff')
+
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: oswald
+	font-size: $fontsize
+	min-width: 320px
+	position: relative
+	line-height: 1.3
+	overflow-x: hidden
+	color: $textcolor
+
+.container
+	max-width: 1200px
+	width: 97%
+	margin: 0 auto
+
+ul 
+	list-style-type: none
+	margin: 0
+	padding: 0
+
