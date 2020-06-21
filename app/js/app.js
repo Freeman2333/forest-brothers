@@ -20,7 +20,7 @@ $(document).ready(function() {
 	})
 
 	$(".banner-section .btn-lg-green").click(function () {
-		$("html, body").animate({ scrollTop: $(".banner-section").height()}, "slow");
+		$("html, body").animate({ scrollTop: $(".banner-section").height()+ 250}, "slow");
 		return false;
 	});
 });

@@ -48,6 +48,16 @@
 		&:before 
 			display: none
 
+
+	.about-banner
+		margin-top: -10px
+
+	.about-background
+		top: 100px
+
+	.partners-section
+		padding-top: 170px
+
 @media only screen and (max-width : 1000px)
 	.footer-nav__list
 		flex-direction: column
@@ -73,8 +83,6 @@
 
 	.partner
 		margin: 0 10px 70px
-		&:last-child
-			margin-bottom: 0
 
 	.partners-gallery
 		justify-content: space-around
@@ -83,6 +91,11 @@
 
 	.banner-item
 		padding-left: 100px
+	
+	.about-background
+		&:before 
+			display: none
+
 
 @media only screen and (max-width : 750px)
 
@@ -131,6 +144,35 @@
 		&:before
 			max-width: 100%
 
+	.about-banner
+		max-width: 86%
+		&:before, &:after 
+			max-width: 100%
+
+	.partners-section:before
+		left: -200px
+
+@media only screen and (max-width : 650px)
+	.partners-section:after
+		right: -200px
+
+	.about-title
+		background: url('../images/about/about-mobile-title.svg')
+		width: 260px
+		height: 80px
+
+	.about-section
+		img 
+			max-width: 100%
+	.about-banner
+		padding: 70px 20px
+		.btn
+			width: 281px
+			height: 60px
+			background: url('../images/about/about-mobile-btn.svg')
+
+	.partners-section
+		padding-top: 60px
 
 
 @media only screen and (max-width : 500px)
@@ -140,6 +182,12 @@
 	.slider-nav
 		top: 83%
 		z-index: 9999
+
+	.about-section:before
+		max-width: 100%
+
+	.partners-section
+		padding-top: 120px
 
 @media only screen and (max-width : 400px)
 
@@ -198,6 +246,29 @@
 		padding-top: 24px
 		background: url('../images/partners/mobile/partners-bottom-2.svg') 
 		background-size: cover
+
+	.about-background-img
+		height: 800px
+		max-width: auto
+
+	.about-section
+		img
+			display: none
+
+	.about-background
+		height: 800px
+		background: url('../images/about/img1.jpg') no-repeat
+		background-size: cover
+
+	.partners-section
+		padding-top: 190px
+		&:after 
+			right: 0
+			top: 89px
+		&:before
+			top: -110px
+
+
 
 @media only screen and (max-width : 350px)
 	.banner-item
