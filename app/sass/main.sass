@@ -399,6 +399,173 @@
 	bottom: 20px
 	left: calc(50% - 79px)
 
+// about
+
+.about-section
+	position: relative
+	background: #DEDECE
+	height: 750px
+	min-height: 750px
+	&:before 
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		display: block
+		width: 462px
+		height: 169px
+		background: url('../images/about/about-before.png')
+	.menu-inner
+		position: relative
+		z-index: 333
+
+.about-background
+	position: absolute
+	width: 100%
+	z-index: 0
+	left: 0
+	right: 0
+	top: 150px
+	background: url('../images/about/img2.jpg') 100% 0 no-repeat
+
+.about-banner
+	position: relative
+	z-index: 4
+	margin: -30px auto
+	max-width: 760px
+	padding: 100px 96px 
+	background: #FFFFFF
+	opacity: 0.9
+
+.about-logo
+	width: 118px
+	height: 128px
+	display: block
+	margin: 0 auto 48px
+	background: url('../images/logo-black.svg') no-repeat
+	background-size: cover
+
+.about-title
+	width: 433px
+	height: 38px
+	background: url('../images/about/about-title.png')
+	background-size: cover
+	margin: 0 auto 30px
+
+.about-text
+	font-family: open
+	font-size: 14px
+	line-height: 170%
+	margin-bottom: 30px
+
+.about-btn
+	width: 245px
+	height: 60px
+	margin: 0 auto
+	display: block
+	line-height: 60px
+	background: url('../images/about/about-btn.svg')
+	background-size: cover
+	&:hover
+		color: #018139
+
+// .about-banner-behind
+// 	position: absolute
+// 	width: 845px
+// 	height: 900px
+// 	background: url('../images/about/about-bg.png')
+// 	left: calc(50% - 422.5px)
+// 	top: calc(50% - 450px)
+// 	z-index: 1
+
+.about-banner-center
+	width: 502px
+	height: 640px
+	position: absolute
+	top: calc(50% - 370px)
+	// opacity: 1
+	z-index: -1
+	left: calc(50% - 251px)
+	background: #DEDECE
+
+.about-banner-side
+	width: 301px
+	height: 900px
+	position: absolute
+	top: calc(50% - 450px)
+	background: url('../images/about/about-info-left.png')
+	background-size: cover
+	z-index: -1
+
+.about-banner-side--left
+	left: -150px
+
+.about-banner-side--right
+	right: -150px
+	transform: rotate(180deg)
+
+// partners section
+
+.partners-section
+	position: relative
+	padding-top: 240px
+	background: #DEDECE
+	&:before 
+		content: ''
+		position: absolute
+		top: -100px
+		width: 462px
+		height: 406px
+		left: 0
+		background: url('../images/partners/partners-before-left.png')
+		background-size: cover
+		max-width: 100%
+	&:after 
+		content: ''
+		position: absolute
+		width: 419px
+		height: 380px
+		top: -30px
+		right: 0
+		background: url('../images/partners/partners-after-right.png')
+		background-size: cover
+		max-width: 100%
+
+.partners-title
+	width: 176px
+	height: 38px
+	margin: 0 auto 70px
+	background: url('../images/partners/partners-title.svg')
+	background-size: cover
+
+.partners-gallery
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	margin-bottom: 56px
+	align-items: center
+
+.partner
+	margin-right: 15px
+	&:last-child
+		margin-right: 0
+		
+.partner--sun
+	width: 150px
+	height: 32.36px
+	background: url('../images/partners/sun.svg')
+
+.partners-bottom
+	width: 100%
+	height: 290px
+	background: url('../images/partners/partners-bg.jpg') 
+	background-size: cover
+
+// .partners-bottom__inner
+// 	width: 100%
+// 	height: 290px
+// 	background: url('../images/partners/mobile/partners-bottom.svg') 0 25px repeat-x
+
 // events-section
 
 .events-section

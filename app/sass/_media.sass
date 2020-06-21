@@ -71,6 +71,14 @@
 	.footer-copyright
 		margin-bottom: 15px
 
+	.partner
+		margin: 0 10px 70px
+		&:last-child
+			margin-bottom: 0
+
+	.partners-gallery
+		justify-content: space-around
+
 @media only screen and (max-width : 900px)
 
 	.banner-item
@@ -161,6 +169,35 @@
 	.event-section-bg
 		max-width: 223px
 		height: 99px
+
+@media only screen and (max-width : 375px)
+
+	.partners-section:before 
+		background: url('../images/partners/mobile/pertners-left.svg')
+		top: -170px
+		width: 462px
+		height: 406px
+		left: -200px
+
+	.partners-section
+		padding-top: 166px
+
+	.partners-section:after 
+		background: url('../images/partners/mobile/pertners-right.svg') no-repeat
+		width: 142px
+    height: 178px
+
+	.partners-bottom__inner
+		height: 234px
+		background: url('../images/partners/mobile/partners-bottom.svg') 0 25px
+		background-size: cover 
+		background-position: bottom
+
+	.partners-bottom
+		height: 258px
+		padding-top: 24px
+		background: url('../images/partners/mobile/partners-bottom-2.svg') 
+		background-size: cover
 
 @media only screen and (max-width : 350px)
 	.banner-item
