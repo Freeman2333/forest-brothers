@@ -23,4 +23,12 @@ $(document).ready(function() {
 		$("html, body").animate({ scrollTop: $(".banner-section").height()+ 250}, "slow");
 		return false;
 	});
+
+	$('.gallery').magnificPopup({
+	  delegate: 'a', // child items selector, by clicking on it popup will open
+	  type: 'image',
+	  gallery:{
+	    enabled:true
+	  }
+	});
 });

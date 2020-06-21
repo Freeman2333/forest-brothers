@@ -43,7 +43,7 @@ function styles() {
 
 function scripts() {
 	return src([
-		'node_modules/jquery/dist/jquery.min.js','node_modules/jquery-nice-select/js/jquery.nice-select.min.js','app/libs/slick.min.js', // npm vendor example (npm i --save-dev jquery)
+		'node_modules/jquery/dist/jquery.min.js','node_modules/jquery-nice-select/js/jquery.nice-select.min.js','app/libs/slick.min.js','app/libs/jquery.magnific-popup.min.js', // npm vendor example (npm i --save-dev jquery)
 		'app/js/app.js' // app.js. Always at the end
 		])
 	.pipe(concat('app.min.js'))
