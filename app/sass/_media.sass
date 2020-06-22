@@ -220,6 +220,27 @@
 
 @media only screen and (max-width : 375px)
 
+	.header
+		background: url('../images/banner-mobile-top.svg') no-repeat
+		height: 150px
+
+	.banner-section
+		.btn.btn-lg-green
+			background: url('../images/banner-btn-mobile.svg')
+			width: 158px
+			height: 50px
+			&:before 
+				top: 5px	
+		&:after 
+			background: url('../images/banner-mobile-bottom.svg') 0 100% no-repeat
+			height: 325.58px
+			position: absolute
+			top: calc(100% - 325.58px)
+
+	.about-section
+		padding-top: 35px	
+
+
 	.partners-section:before 
 		background: url('../images/partners/mobile/pertners-left.svg')
 		top: -170px
@@ -228,7 +249,7 @@
 		left: -200px
 
 	.partners-section
-		padding-top: 166px
+		padding-top: 210px
 
 	.partners-section:after 
 		background: url('../images/partners/mobile/pertners-right.svg') no-repeat
@@ -261,14 +282,46 @@
 		background-size: cover
 
 	.partners-section
-		padding-top: 190px
 		&:after 
 			right: 0
 			top: 89px
 		&:before
 			top: -110px
 
+	.partners-gallery
+		margin-bottom: 0	
 
+	.partners-title
+		height: 32px	
+		width: 151px
+
+	.events-title
+		transform: scale(1)
+		height: 32px	
+		width: 207px	
+		background: url('../images/events/events-mobile-title.svg')
+		background-size: cover
+		margin-bottom: 50px	
+
+	.events-section
+		.btn.btn-lg-y
+			background: url('../images/events/events-mobile-btn.svg')
+
+	.gallery-title
+		background: url('../images/gallery/gallery-mobile-title.svg')
+		width: 120px
+		height: 32px
+
+	.gallery-btn.btn
+		background: url('../images/gallery/gallery-mobile-btn.svg')
+		width: 202px
+		height: 60px
+
+	.gallery-section
+		padding-top: 120px	
+		padding-bottom: 65px	
+		&:after
+			background: url('../images/footer/footer-before.svg') 0 100% no-repeat
 
 @media only screen and (max-width : 350px)
 	.banner-item
